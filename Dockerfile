@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y \
     minidlna \
     && rm -rf /var/lib/apt/lists/*
 
-COPY libjpeg62.deb /tmp/libjpeg62.deb
-RUN dpkg -i /tmp/libjpeg62.deb
+COPY lib/libjpeg62.deb /tmp/libjpeg62.deb
+RUN dpkg -i /tmp/libjpeg62.deb && rm /tmp/libjpeg62.deb
 
 COPY bin/minidlnad /usr/sbin/minidlnad
 
