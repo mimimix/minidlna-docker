@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  minidlna:
+    image: ghcr.io/mimimix/minidlna-docker:latest
+    network_mode: host
+    container_name: minidlna
+    volumes:
+      - ./media:/media
+      - ./minidlna.conf:/etc/minidlna.conf
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # ports:
+    #   - "1900:1900/udp"
+    #   - "8200:8200/tcp"
