@@ -14,9 +14,9 @@ COPY bin/minidlnad /usr/sbin/minidlnad
 RUN mkdir -p /media
 
 COPY icons/png_sm.png /usr/local/share/minidlna/icons/png_sm.png
-COPY icons/png_sm.png /usr/local/share/minidlna/icons/png_lrg.png
-COPY icons/png_sm.jpeg /usr/local/share/minidlna/icons/jpeg_sm.jpeg
-COPY icons/png_sm.jpeg /usr/local/share/minidlna/icons/jpeg_lrg.jpeg
+COPY icons/png_lrg.png /usr/local/share/minidlna/icons/png_lrg.png
+COPY icons/jpeg_sm.jpeg /usr/local/share/minidlna/icons/jpeg_sm.jpeg
+COPY icons/jpeg_lrg.jpeg /usr/local/share/minidlna/icons/jpeg_lrg.jpeg
 RUN chmod +x /usr/sbin/minidlnad
 
 # Start services
