@@ -6,7 +6,7 @@ services:
     network_mode: host
     container_name: minidlna
     volumes:
-      - ./media:/media
+      - ./media:/storage
       - ./minidlna.conf:/etc/minidlna.conf
     extra_hosts:
       - "host.docker.internal:host-gateway"

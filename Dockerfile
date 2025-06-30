@@ -11,7 +11,7 @@ RUN dpkg -i /tmp/libjpeg62.deb && rm /tmp/libjpeg62.deb
 COPY bin/minidlnad /usr/sbin/minidlnad
 
 # Create media directory
-RUN mkdir -p /media
+RUN mkdir -p /storage
 
 COPY icons/png_sm.png /usr/local/share/minidlna/icons/png_sm.png
 COPY icons/png_lrg.png /usr/local/share/minidlna/icons/png_lrg.png
